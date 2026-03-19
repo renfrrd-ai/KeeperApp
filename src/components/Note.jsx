@@ -11,7 +11,7 @@ function Note(props) {
           props.onDelete(props.id);
         }}
       >
-        DELETE
+        <DeleteIcon />
       </button>
     </div>
   );

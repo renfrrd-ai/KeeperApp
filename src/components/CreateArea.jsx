@@ -26,16 +26,18 @@ function CreateArea(props) {
           }}
           value={content}
         />
-        <button
-          onClick={(e) => {
-            e.preventDefault();
-            props.onAdd({ title, content });
-            setTitle("");
-            setContent("");
-          }}
-        >
-          Add
-        </button>
+        <Zoom in={true}>
+          <Fab
+            onClick={(e) => {
+              e.preventDefault();
+              props.onAdd({ title, content });
+              setTitle("");
+              setContent("");
+            }}
+          >
+            <AddIcon />
+          </Fab>
+        </Zoom>
       </form>
     </div>
   );
